@@ -1,0 +1,183 @@
+h1 {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+.bubble {
+  height: 100px;
+  width: 250px;
+  background-color: lightgray;
+  border-radius: 50%;
+  margin-left: 700px;
+  margin-bottom: -50px;
+  padding-top: 50px;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Roboto';
+  position: relative;
+}
+
+.bubble:after {
+  height: 100px;
+    border-left: 50px solid transparent;
+    border-top: 20px solid lightgray;
+    bottom: -100px;
+    content: "";
+    position: absolute;
+    right: 150px;
+ 	transform: rotate(-30deg);
+}
+
+
+.robots {
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
+}
+
+
+.head, 
+.left_arm, 
+.torso, 
+.right_arm, 
+.left_leg, 
+.right_leg {
+	 background-color: #F66733;
+}
+
+.head { 
+	width: 200px; 
+	margin: 0 auto; 
+	height: 150px; 
+	border-radius: 200px 200px 0 0; 
+	margin-bottom: 10px;
+} 
+
+.eyes {
+	display: flex;
+}
+
+.head:hover {
+	width: 300px;
+    transition: 1s ease-in-out;
+}
+
+.upper_body { 
+	width: 300px; 
+	height: 150px;
+	display: flex;
+} 
+
+.left_arm, .right_arm { 
+	width: 40px; 
+	height: 125px;
+	border-radius: 100px; 
+} 
+
+.left_arm { 
+	margin-right: 10px; 
+} 
+
+.right_arm { 
+	margin-left: 10px;
+	animation: hinge 1s infinite;
+} 
+
+
+@keyframes hinge {
+  0% {
+    transform-origin: bottom left;
+    animation-timing-function: ease-in-out;
+  }
+
+  20%,
+  60% {
+    transform: rotate3d(0, 0, 5, 30deg);
+    transform-origin: bottom left;
+    animation-timing-function: ease-in-out;
+  }
+
+  40%,
+  80% {
+    transform: rotate3d(0, 0, 0, 20deg);
+    transform-origin: bottom left;
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-name: hinge;
+  animation-name: hinge;
+}
+
+
+.torso { 
+	width: 200px; 
+	height: 200px;
+	border-radius: 0 0 50px 50px; 
+} 
+
+.lower_body { 
+	width: 200px; 
+	height: 200px;
+	/* This is another useful property. Hmm what do you think it does?*/
+	margin: 0 auto;
+	display: flex;
+} 
+
+.left_leg, .right_leg { 
+	width: 40px; 
+	height: 120px;
+	border-radius: 0 0 100px 100px; 
+} 
+
+.left_leg { 
+	margin-left: 45px; 
+} 
+
+.left_leg:hover {
+	-webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
+
+.right_leg { 
+	margin-left: 30px; 
+}
+
+.left_eye, .right_eye { 
+	width: 20px; 
+	height: 20px; 
+	border-radius: 15px; 
+	background-color: white;  
+} 
+
+.left_eye { 
+	/* These properties are new and you haven't encountered
+	in this course. Check out CSS Tricks to see what it does! */
+	position: relative; 
+	top: 100px; 
+	left: 40px; 
+} 
+
+.right_eye { 
+	position: relative; 
+	top: 100px; 
+	left: 120px; 
+}
+
+
+
+
